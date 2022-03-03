@@ -14,7 +14,7 @@
 	  Connection conn=null;
 	
 	  try{
-		 String jdbcUrl = "jdbc:mysql://18.205.188.103:3306:3306/test?&useSSL=false";
+		 String jdbcUrl = "jdbc:mysql://18.205.188.103:3306/test?&useSSL=false";
 	     String dbId = "lion";
 	     String dbPass = "1234";
 		
