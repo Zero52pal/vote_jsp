@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Vote Result</title>
+<title>POSCO ICT 2th BitKing</title>
 </head>
 <style>
         .ratio{padding-top:20px  }
@@ -50,25 +50,36 @@
 			</tr>
 			
 			<tr>
-			<%
+			<%-- <%
 			while(rs.next()){
 				int id = rs.getInt("id");
 				String name = rs.getString("name");
 				int cnt = rs.getInt("cnt");
-				sum = sum + cnt;
-				out.println("<td>");
-				out.println("<ul class=");
 				
-				out.println("ratio");
-				out.println(">");
-					out.println("<li>");
-					out.println(100);
-							
-						out.println("</li>");
+				
+				
+				out.println("<td> ");
+				out.println(" <ul class=");
+				out.println("ratio ");
+				out.println("><li> ");
+				out.println("<div style= ");
+				out.println("height: 30% ");
+				out.println("><em>");
+				out.println("30%");
+				out.println("></em>");
+				out.println("</div>");
+				out.println("</li>");
 				out.println("</ul>");
 				out.println("</td>");
+				out.println("");
+
+				
+				
+				
 			} 
-			%>
+			
+			
+			%> --%>
 		</tr>
 			
 			<tr align="center" >

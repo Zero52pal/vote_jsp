@@ -41,11 +41,11 @@ table, th, td {
 	<h4 align="center"> (이 결과는 실제로 반영될 것입니다.) </h4>
 	<table style="width: 100%" >
 		<tr>
-			<th><img src="김익한.png" width=100 height=100></th>
-			<th><img src="이권철.png" width=100 height=100></th>
-			<th><img src="이동현.png" width=100 height=100></th>
-			<th><img src="이진선.png" width=100 height=100></th>
-			<th><img src="최호진.png" width=100 height=100></th>
+			<th><img src="./img/김익한.png" width=100 height=100></th>
+			<th><img src="./img/이권철.png" width=100 height=100></th>
+			<th><img src="./img/이동현.png" width=100 height=100></th>
+			<th><img src="./img/이진선.png" width=100 height=100></th>
+			<th><img src="./img/최호진.png" width=100 height=100></th>
 		</tr>
 		<tr align="center">
 			<td>김익한</td>
@@ -64,8 +64,8 @@ table, th, td {
 	</table>
 	<input type="submit" value="투표" />
 	<input type="button" value="결과" 
-			onclick="javascript:window.open('pollView.jsp?num=<%=num%>'
-			,'pollView','width=500, height=350')">
+			<%-- onclick="javascript:window.open('pollView.jsp?num=<%=num%>'
+			,'pollView','width=500, height=350')" --%>>
 	
 </body>
 </html>
