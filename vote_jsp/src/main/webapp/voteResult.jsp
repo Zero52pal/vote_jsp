@@ -50,7 +50,6 @@
 			</tr>
 			
 			<tr>
-
 			<%
 			while(rs.next()){
 				int id = rs.getInt("id");
@@ -70,12 +69,7 @@
 				out.println("</td>");
 			} 
 			%>
-				
-				
-				
-				
-
-			</tr>
+		</tr>
 			
 			<tr align="center" >
 				<td>김익한</td>
