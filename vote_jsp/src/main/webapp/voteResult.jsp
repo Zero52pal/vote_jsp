@@ -33,12 +33,16 @@
 			pstmt = conn.prepareStatement(sql);
 			rs = pstmt.executeQuery();
 		 
+<<<<<<< HEAD
 		while(rs.next()){
 			int id = rs.getInt("id");
 			String name = rs.getString("name");
 			int cnt = rs.getInt("cnt");
 			sum = sum + cnt;
 		} 
+=======
+		
+>>>>>>> JeongWoo
 	  }catch(Exception e){ 
 		 e.printStackTrace();
 	  }
@@ -50,6 +54,7 @@
 				<td colspan="5"><h1 align="center">투표 결과</h1></td>
 			</tr>
 			<tr>
+<<<<<<< HEAD
 				<td>
 					<ul class="ratio">
 						<li>
@@ -92,6 +97,29 @@
 					</ul>
 				</td>
 			</tr>
+=======
+			<%
+			while(rs.next()){
+				int id = rs.getInt("id");
+				String name = rs.getString("name");
+				int cnt = rs.getInt("cnt");
+				sum = sum + cnt;
+				out.println("<td>");
+				out.println("<ul class=");
+				
+				out.println("ratio");
+				out.println(">");
+					out.println("<li>");
+					out.println(100);
+							
+						out.println("</li>");
+				out.println("</ul>");
+				out.println("</td>");
+			} 
+			%>
+		</tr>
+			
+>>>>>>> JeongWoo
 			<tr align="center" >
 				<td>김익한</td>
 				<td>이권철</td>
