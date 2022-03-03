@@ -1,12 +1,30 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ page import="java.sql.*"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
-<title>Insert title here</title>
+<meta charset="UTF-8">
+<title>DB Driver Test Page</title>
 </head>
 <body>
-<h1>TEST PAGE</h1>
+	<h1>DB Driver TEST PAGE</h1>
+
+	<%
+	  Connection conn=null;
+	
+	  try{
+		 String jdbcUrl = "jdbc:mysql://18.205.188.103:3306:3306/test?&useSSL=false";
+	     String dbId = "lion";
+	     String dbPass = "1234";
+		
+		 Class.forName("com.mysql.cj.jdbc.Driver");
+		 conn = DriverManager.getConnection(jdbcUrl,dbId ,dbPass );
+		 out.println("DB에 연결되었습니다.");
+	  }catch(Exception e){ 
+		 e.printStackTrace();
+	  }
+	%>
+
 </body>
 </html>
