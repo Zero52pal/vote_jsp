@@ -13,9 +13,7 @@
         .ratio div{position:absolute;left:0;bottom:0;width:100%;background:#D9AAF0 repeat;}
         .ratio em{position:absolute;top:-30px;width:100%;font-size:20px;font-weight:bold;text-align:center}
     </style>
-
 <body>
-
 	<%
 	  	Connection conn=null;
 		PreparedStatement pstmt=null;
@@ -34,23 +32,18 @@
 		 String sql = "select * from candidate";
 			pstmt = conn.prepareStatement(sql);
 			rs = pstmt.executeQuery();
-		 
-		
+
 	  }catch(Exception e){ 
 		 e.printStackTrace();
 	  }
 	%>
-
-
 	<form method=post action="testPage.jsp">
 		<table width="80%" border="1" align="center" cellpadding="10"
 			cellspacing="1">
 			<tr>
 				<td colspan="5"><h1 align="center">투표 결과</h1></td>
 			</tr>
-			
 			<tr>
-
 			<%
 			while(rs.next()){
 				int id = rs.getInt("id");
@@ -70,20 +63,13 @@
 				out.println("</td>");
 			} 
 			%>
-				
-				
-				
-				
-
-			</tr>
-			
+		</tr>
 			<tr align="center" >
 				<td>김익한</td>
 				<td>이권철</td>
 				<td>이동현</td>
 				<td>이진선</td>
 				<td>최호진</td>
-				
 			</tr>
 		</table>
 	</form>

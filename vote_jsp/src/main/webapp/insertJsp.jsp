@@ -5,12 +5,12 @@
 <%@page import="java.sql.PreparedStatement"%>
 <%@page import="java.io.PrintWriter"%>
 <%@page import="java.io.IOException"%>
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
+<meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
 <body>
@@ -18,13 +18,13 @@
       response.setContentType("text/html;charset=UTF-8");
       PrintWriter pw = response.getWriter();
 
-      // 1. ÆÄ¶ó¹ÌÅÍ·Î Àü¼ÛµÈ °ªÀ» ¾ò¾î¿À±â.
+      // 1. íŒŒë¼ë¯¸í„°ë¡œ ì „ì†¡ëœ ê°’ì„ ì–»ì–´ì˜¤ê¸°.
       request.setCharacterEncoding("UTF-8");
       String name = request.getParameter("name");
       String id = request.getParameter("id");
       String pwd= request.getParameter("pwd");
    
-		System.out.println(id);
+	  System.out.println(id);
       int n=0;
       PreparedStatement pstmt2 = null;
       PreparedStatement pstmt = null;
@@ -32,7 +32,7 @@
       ResultSet rs = null;
 
       try{
-         // 2. Àü¼ÛµÈ °ªÀ» db¿¡ ÀúÀå.
+         // 2. ì „ì†¡ëœ ê°’ì„ dbì— ì €ì¥.
 		 String jdbcUrl = "jdbc:mysql://18.205.188.103:3306/test?&useSSL=false";
 	     String dbId = "lion";
 	     String dbPass = "1234";
@@ -51,8 +51,8 @@
                pw.println("<html>");
                pw.println("<head></head>");
                pw.println("<body>");
-               pw.println("¾ÆÀÌµğÁßº¹ ÀÎÇØ °¡ÀÔ¿¡ ½ÇÆĞÇß½À´Ï´Ù.<br/>");
-               pw.println("<a href='javascript:history.go(-1)'>ÀÌÀüÆäÀÌÁö·Î °¡±â</a>");
+               pw.println("ì•„ì´ë””ì¤‘ë³µ ì¸í•´ ê°€ì…ì— ì‹¤íŒ¨í–ˆìŠµë‹ˆë‹¤.<br/>");
+               pw.println("<a href='javascript:history.go(-1)'>ì´ì „í˜ì´ì§€ë¡œ ê°€ê¸°</a>");
                pw.println("</body>");
                pw.println("</html>");
                pstmt2.close();
@@ -70,7 +70,7 @@
          pstmt.setString(2, pwd);
          pstmt.setString(3, name);
 
-         //sql±¸¹® ½ÇÇàÇÏ±â
+         //sqlêµ¬ë¬¸ ì‹¤í–‰í•˜ê¸°
          n=pstmt.executeUpdate();
 
 
@@ -87,18 +87,18 @@
          }
       }
 
-      // 3. »ç¿ëÀÚ(Å¬¶óÀÌ¾ğÆ®)¿¡ °á°ú¸¦ ÀÀ´äÇÏ±â.
+      // 3. ì‚¬ìš©ì(í´ë¼ì´ì–¸íŠ¸)ì— ê²°ê³¼ë¥¼ ì‘ë‹µí•˜ê¸°.
       pw.println("<html>");
       pw.println("<head></head>");
       pw.println("<body>");
 
       if(n>0){
-         pw.println( id + "´Ô! ¼º°øÀûÀ¸·Î °¡ÀÔµÇ¾ú½À´Ï´Ù.<br/>");
-         pw.println("<a href='index.jsp'>¸ŞÀÎÆäÀÌÁö ÀÌµ¿</a>");
+         pw.println( id + "ë‹˜! ì„±ê³µì ìœ¼ë¡œ ê°€ì…ë˜ì—ˆìŠµë‹ˆë‹¤.<br/>");
+         pw.println("<a href='index.jsp'>ë©”ì¸í˜ì´ì§€ ì´ë™</a>");
 
       }else{
-         pw.println("¿À·ù·Î ÀÎÇØ °¡ÀÔ¿¡ ½ÇÆĞÇß½À´Ï´Ù.<br/>");
-         pw.println("<a href='javascript:history.go(-1)'>ÀÌÀüÆäÀÌÁö·Î °¡±â</a>");
+         pw.println("ì˜¤ë¥˜ë¡œ ì¸í•´ ê°€ì…ì— ì‹¤íŒ¨í–ˆìŠµë‹ˆë‹¤.<br/>");
+         pw.println("<a href='javascript:history.go(-1)'>ì´ì „í˜ì´ì§€ë¡œ ê°€ê¸°</a>");
       }   
       pw.println("</body>");
       pw.println("</html>");

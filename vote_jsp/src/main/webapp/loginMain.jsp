@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,16 +9,16 @@
 <body>
 <ul>
 
-	<li><a href="loginMain.jsp">ÅõÇ¥À²</a></li>
-	<li><a href="loginMain.jsp">ÅõÇ¥ÇÏ±â</a></li>
+	<li><a href="loginMain.jsp">íˆ¬í‘œìœ¨</a></li>
+	<li><a href="loginMain.jsp">íˆ¬í‘œí•˜ê¸°</a></li>
 	
 </ul>
 	<% session = request.getSession();
-	out.print("¾È³çÇÏ¼¼¿ä " + session.getAttribute("memberId") + "´Ô"+ "<br>"); %>
-	<a href="logout.jsp">·Î±×¾Æ¿ô</a>
+	out.print("ì•ˆë…•í•˜ì„¸ìš” " + session.getAttribute("memberId") + "ë‹˜"+ "<br>"); %>
+	<a href="logout.jsp">ë¡œê·¸ì•„ì›ƒ</a>
 <%-- 
 	<%
-	//FortuneServlet¿¡¼­ "fortuneToday"¶ó´Â Å°°ªÀ¸·Î ´ãÀº String type ¾ò¾î³»±â
+	//FortuneServletì—ì„œ "fortuneToday"ë¼ëŠ” í‚¤ê°’ìœ¼ë¡œ ë‹´ì€ String type ì–»ì–´ë‚´ê¸°
 	
 	request.setCharacterEncoding("euc-kr");
 
@@ -27,7 +27,7 @@
 	
 	%>
 
-<p>¾È³çÇÏ¼¼¿ä:<strong><%=id%></strong></p>
+<p>ì•ˆë…•í•˜ì„¸ìš”:<strong><%=id%></strong></p>
 --%>
 
 </body>

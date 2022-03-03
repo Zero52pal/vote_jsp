@@ -28,31 +28,4 @@
 		<nature>org.eclipse.jdt.core.javanature</nature>
 		<nature>org.eclipse.wst.jsdt.core.jsNature</nature>
 	</natures>
-	<linkedResources>
-		<link>
-			<name>src/main/webapp/img/김익한.png</name>
-			<type>1</type>
-			<locationURI>PARENT-3-PROJECT_LOC/Desktop/%EA%B9%80%EC%9D%B5%ED%95%9C.png</locationURI>
-		</link>
-		<link>
-			<name>src/main/webapp/img/이권철.png</name>
-			<type>1</type>
-			<locationURI>PARENT-3-PROJECT_LOC/Desktop/%EC%9D%B4%EA%B6%8C%EC%B2%A0.png</locationURI>
-		</link>
-		<link>
-			<name>src/main/webapp/img/이동현.png</name>
-			<type>1</type>
-			<locationURI>PARENT-3-PROJECT_LOC/Desktop/%EC%9D%B4%EB%8F%99%ED%98%84.png</locationURI>
-		</link>
-		<link>
-			<name>src/main/webapp/img/이진선.png</name>
-			<type>1</type>
-			<locationURI>PARENT-3-PROJECT_LOC/Desktop/%EC%9D%B4%EC%A7%84%EC%84%A0.png</locationURI>
-		</link>
-		<link>
-			<name>src/main/webapp/img/최호진.png</name>
-			<type>1</type>
-			<locationURI>PARENT-3-PROJECT_LOC/Desktop/%EC%B5%9C%ED%98%B8%EC%A7%84.png</locationURI>
-		</link>
-	</linkedResources>
 </projectDescription>
