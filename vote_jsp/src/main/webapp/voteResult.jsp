@@ -35,14 +35,6 @@
 			pstmt = conn.prepareStatement(sql);
 			rs = pstmt.executeQuery();
 		 
-		while(rs.next()){
-			int id = rs.getInt("id");
-			String name = rs.getString("name");
-			int cnt = rs.getInt("cnt");
-			sum = sum + cnt;
-		} 
-		
-			
 		
 	  }catch(Exception e){ 
 		 e.printStackTrace();
@@ -58,54 +50,26 @@
 			</tr>
 			
 			<tr>
-				<td>
-					<ul class="ratio">
-						<li>
-						
-							<div style="height: 30%">
-								<em><%= 30 %></em>
-							</div></li>
-					</ul>
-				</td>
+			<%
+			while(rs.next()){
+				int id = rs.getInt("id");
+				String name = rs.getString("name");
+				int cnt = rs.getInt("cnt");
+				sum = sum + cnt;
+				out.println("<td>");
+				out.println("<ul class=");
 				
-				
-				
-				
-				<td>
-					<ul class="ratio">
-						<li>
-							<div style="height: 30%">
-								<em>30%</em>
-							</div></li>
-					</ul>
-				</td>
-				<td>
-					<ul class="ratio">
-						<li>
-							<div style="height: 30%">
-								<em>30%</em>
-							</div></li>
-					</ul>
-				</td>
-				<td>
-					<ul class="ratio">
-						<li>
-							<div style="height: 30%">
-								<em>30%</em>
-							</div></li>
-					</ul>
-				</td>
-				<td>
-					<ul class="ratio">
-						<li>
-							<div style="height: 30%">
-								<em>30%</em>
-							</div></li>
-					</ul>
-				</td>
-				
-
-			</tr>
+				out.println("ratio");
+				out.println(">");
+					out.println("<li>");
+					out.println(100);
+							
+						out.println("</li>");
+				out.println("</ul>");
+				out.println("</td>");
+			} 
+			%>
+		</tr>
 			
 			<tr align="center" >
 				<td>김익한</td>
