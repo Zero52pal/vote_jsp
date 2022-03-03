@@ -50,7 +50,6 @@
 			</tr>
 			
 			<tr>
-
 			<%
 			while(rs.next()){
 				int id = rs.getInt("id");
