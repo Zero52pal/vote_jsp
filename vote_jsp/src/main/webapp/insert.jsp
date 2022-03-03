@@ -42,7 +42,7 @@
 
 
 <div id = "insert-window">
-<form method="get" action="insertJsp.jsp">
+<form method="post" action="insertJsp.jsp">
 		
 			<br>
 			<br>
