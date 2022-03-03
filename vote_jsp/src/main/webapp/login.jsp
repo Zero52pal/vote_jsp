@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form method="get" action="loginJsp.jsp">
+<form method="post" action="loginJsp.jsp">
 
 	<fieldset id="regbox">
 
