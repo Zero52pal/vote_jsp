@@ -32,17 +32,7 @@
 		 String sql = "select * from candidate";
 			pstmt = conn.prepareStatement(sql);
 			rs = pstmt.executeQuery();
-		 
-<<<<<<< HEAD
-		while(rs.next()){
-			int id = rs.getInt("id");
-			String name = rs.getString("name");
-			int cnt = rs.getInt("cnt");
-			sum = sum + cnt;
-		} 
-=======
-		
->>>>>>> JeongWoo
+
 	  }catch(Exception e){ 
 		 e.printStackTrace();
 	  }
@@ -54,50 +44,6 @@
 				<td colspan="5"><h1 align="center">투표 결과</h1></td>
 			</tr>
 			<tr>
-<<<<<<< HEAD
-				<td>
-					<ul class="ratio">
-						<li>
-						
-							<div style="height: 30%">
-								<em><%= 30 %></em>
-							</div></li>
-					</ul>
-				</td>
-				<td>
-					<ul class="ratio">
-						<li>
-							<div style="height: 30%">
-								<em>30%</em>
-							</div></li>
-					</ul>
-				</td>
-				<td>
-					<ul class="ratio">
-						<li>
-							<div style="height: 30%">
-								<em>30%</em>
-							</div></li>
-					</ul>
-				</td>
-				<td>
-					<ul class="ratio">
-						<li>
-							<div style="height: 30%">
-								<em>30%</em>
-							</div></li>
-					</ul>
-				</td>
-				<td>
-					<ul class="ratio">
-						<li>
-							<div style="height: 30%">
-								<em>30%</em>
-							</div></li>
-					</ul>
-				</td>
-			</tr>
-=======
 			<%
 			while(rs.next()){
 				int id = rs.getInt("id");
@@ -118,8 +64,6 @@
 			} 
 			%>
 		</tr>
-			
->>>>>>> JeongWoo
 			<tr align="center" >
 				<td>김익한</td>
 				<td>이권철</td>
