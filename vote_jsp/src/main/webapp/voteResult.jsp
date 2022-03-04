@@ -13,6 +13,51 @@
         .ratio li{float:center;position:relative;width:100px;height:300px;margin-right:10px;list-style:none}
         .ratio div{position:absolute;left:0;bottom:0;width:100%;background:#D9AAF0 repeat;}
         .ratio em{position:absolute;top:-30px;width:100%;font-size:20px;font-weight:bold;text-align:center}
+        
+        
+.vote-wrapp{
+	background-color: #fdeafd;
+	width: 600px;
+	margin: 50px; auto;
+	border-bottom: 1px solid #fdeafd;
+	box-shadow: 0px 11px 31px rgb(0,0,0,0.2);
+}
+
+.vote-top{
+	background-color: #e32fe5;
+	padding: 60px 0 120px;
+	text-align: center;
+}
+.vote-title{
+	font-size: 30px;
+	colot: #c92bcc;
+	text-align: center;
+	font-weight: 400;
+}
+.vote-form{
+	margin-top: 30px;
+}
+
+.vote-box{
+	background-color: #fdeafd;
+	margin:-40px 40px 40px;
+	border-radius: 20px;
+	padding: 20px 40px 40px;
+	box-shadow: 0px 3px 20px rgb(0,0,0,0.2);
+}
+.vote-button{
+	background-color: #e32fe5;
+	width: 150px;
+	display: block;
+	margin-left:50px; 
+	margin-top:20px;
+	height: 50px;
+	line-height: 50px;
+	border-radius: 80px;
+	color: #fdeafd;
+	font-size: 16px;
+	font-weight: 700;
+}
     </style>
 <body>
    <%
@@ -40,9 +85,8 @@
        e.printStackTrace();
      }
    %>
-   <form method=post>
-      <table width="80%" border="1" align="center" cellpadding="10"
-         cellspacing="1">
+   <form method=post class = "vote-form">
+      <table class = "vote-box">
          <tr>
             <td colspan="4"><h1 align="center">투표 결과</h1></td>
          </tr>
@@ -111,7 +155,7 @@
             <td>베트남</td>
          </tr>
       </table>
-      <input class="login-button" type="button" value="뒤로가기" onclick="history.back(-1);">
+      <input class="vote-button" type="button" value="뒤로가기" onclick="history.back(-1);">
    </form>
    </body>
 
