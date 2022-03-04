@@ -34,7 +34,7 @@
       
        Class.forName("com.mysql.cj.jdbc.Driver");
        conn = DriverManager.getConnection(jdbcUrl,dbId ,dbPass );
-       out.println("DB에 연결되었습니다.");
+       System.out.println("DB에 연결되었습니다.");
 
      }catch(Exception e){ 
        e.printStackTrace();
@@ -111,6 +111,7 @@
             <td>베트남</td>
          </tr>
       </table>
+      <input class="login-button" type="button" value="뒤로가기" onclick="history.back(-1);">
    </form>
    </body>
 
