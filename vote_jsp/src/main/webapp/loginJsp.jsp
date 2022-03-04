@@ -57,20 +57,16 @@
 		}
 		
 		response.setContentType("text/html;charset=UTF-8");
+		PrintWriter pw = response.getWriter();
 
-		out.println("<html>");
-		out.println("<head></head>");
-		out.println("<body>");
 		if(n>0){
 			session = request.getSession();
 			session.setAttribute("memberId", id);
 			System.out.println(id);
-			response.sendRedirect("loginMain.jsp");	
+			pageContext.forward("loginMain.jsp");	
 		}else{
 			out.println("<a href='javascript:history.go(-1)'>이전페이지로 가기</a>");
 		}
-		out.println("</body>");
-		out.println("</html>");
 %>
 </body>
 </html>

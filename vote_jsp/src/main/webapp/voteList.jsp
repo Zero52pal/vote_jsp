@@ -23,6 +23,8 @@ table, th, td {
 
 </head>
 <body>
+	<% String memberId = request.getParameter("memberId"); %>
+
 	<h1 align="center"> 2기 반장선거 </h1>
 	<h4 align="center"> (이 결과는 실제로 반영될 것입니다.) </h4>
 
@@ -43,6 +45,7 @@ table, th, td {
 				<td>최호진</td>
 			</tr>
 			<tr align="center">
+				<input type=hidden name="memberId" value=<%=memberId %>>
 				<td><input type="radio" name="name" value="김익한"></td>
 				<td><input type="radio" name="name" value="이권철"></td>
 				<td><input type="radio" name="name" value="이동현"></td>
