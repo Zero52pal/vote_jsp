@@ -47,7 +47,7 @@
 			
 			String sql2 = "update candidate set cnt=cnt+1 where name=?";
 
-<<<<<<< HEAD
+
 			pstmt2 = con.prepareStatement(sql2);
 			
 			pstmt2.setString(1, name);
@@ -72,24 +72,7 @@
 			out.println("<a href='loginMain.jsp'>메인으로 가기</a>");
 		}
 		finally{
-=======
-			pstmt.setString(1, name);
-			pstmt.execute();
-	%>
-	<h1>투표에 성공 하였습니다. 감사합니다</h1>
-	<%
-		}catch(ClassNotFoundException ce){
-			System.out.println(ce.getMessage());
-	%>
-	<h1>투표에 실패 하였습니다</h1>
-	<% 
-		}catch(SQLException se){
-			System.out.println(se.getMessage());
-	%>
-	<h1>투표에 실패 하였습니다</h1>
-	<% 
-		}finally{
->>>>>>> Kwon
+
 			try{
 				if(rs!=null) rs.close();
 				if(pstmt1!=null) pstmt1.close();
