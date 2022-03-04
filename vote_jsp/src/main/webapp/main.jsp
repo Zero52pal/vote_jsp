@@ -8,10 +8,12 @@
 <style>
 .login-wrapp{
 	background-color: #fdeafd;
+	vertical-align: middle;
 	width: 600px;
 	margin: 50px; auto;
 	border-bottom: 1px solid #fdeafd;
 	box-shadow: 0px 11px 31px rgb(0,0,0,0.2);
+	
 }
 
 .login-top{
@@ -40,7 +42,7 @@
 	background-color: #e32fe5;
 	width: 200px;
 	display: block;
-	margin-left:120px; 
+	margin-left:10px; 
 	margin-top:30px;
 	height: 70px;
 	line-height: 70px;
@@ -52,7 +54,7 @@
 </style>
 </head>
 <body>
-		
+	<div align="center">
 	<div class="login-wrapp">
 		<div class="login-top">
 			<a href = "#" class="logo">
@@ -61,9 +63,10 @@
 		</div>
 		<div class="login-box">
 			<h1 class="login-title">MAIN</h1>
-				<a class="login-button" href="login.jsp">&emsp;&emsp;&emsp;&emsp;로그인</a>
-				<a class="login-button" href="insert.jsp">&emsp;&emsp;&emsp;&emsp;회원가입</a>
+				<button class="login-button"onclick="location.href='login.jsp'">로그인</button>
+				<button class="login-button"onclick="location.href='insert.jsp'">회원가입</button>
 		</div>
+	</div>
 	</div>
 </body>
 </html>
