@@ -17,15 +17,18 @@
 <body>
 	<%
 	  	Connection conn=null;
-		PreparedStatement pstmt=null;
-		ResultSet rs = null;
-		int sum = 0;
+		PreparedStatement pstmt1=null;
+		PreparedStatement pstmt2=null;
+		ResultSet rs1 = null;
+		ResultSet rs2 = null;
+		int cntSum = 0;
+		
 		// 색상랜덤
 		Random r= new Random(); 
 		String rgb;
 	
 	  try{
-		 String jdbcUrl = "jdbc:mysql://18.205.188.103:3306:3306/test?&useSSL=false";
+		 String jdbcUrl = "jdbc:mysql://18.205.188.103:3306/test?&useSSL=false";
 	     String dbId = "lion";
 	     String dbPass = "1234";
 		
@@ -49,15 +52,28 @@
 			
 			<%
 			try{
-				for(int i = 0; i < 5; i++){
-					String sql = "select * from candidate where id=" + (i+1);
-					pstmt = conn.prepareStatement(sql);
-					rs = pstmt.executeQuery();
+					String sql1 = "select sum(cnt) as cntSum from candidate";
+					pstmt1 = conn.prepareStatement(sql1);
+					rs1 = pstmt1.executeQuery();
+					while(rs1.next()){
+						cntSum = rs1.getInt("cntSum");
+						System.out.print(cntSum + "    ");
+					}
 				
 				
-					int id = rs.getInt("id");
-					String name = rs.getString("name");
-					int cnt = rs.getInt("cnt");	 
+					
+					String sql2 = "select * from candidate";
+					pstmt2 = conn.prepareStatement(sql2);
+					rs2 = pstmt2.executeQuery();
+				
+					while(rs2.next()){
+						int id = rs2.getInt("id");
+						String name = rs2.getString("name");
+						int cnt = rs2.getInt("cnt");	 
+						
+						
+					
+					
 				
 			%>
 			
@@ -66,21 +82,34 @@
 						<li>
 							<%
 							rgb = "#"+Integer.toHexString(r.nextInt(255*255*255));
+							double percent = (cnt*100)/cntSum; 
 							%>
-							<div style="height: 30%; background-color:<%=rgb%>" >
-
-								<em>30</em>
+							<div style="height: <%=percent %>%; background-color:<%=rgb%>" >
+								<%-- <em><%=Integer.toString(cntSum) %></em> --%>
+								<em><%=percent %></em>
 							</div>
 						</li>
 					</ul>
 				</td>
 			
 			<% 
+						
 				
 				}
 			}catch(Exception e){
 				e.printStackTrace();
+			}finally{
+				try{
+					if(rs1!=null) rs1.close();
+					if(rs2!=null) rs2.close();
+					if(pstmt1!=null) pstmt1.close();
+					if(pstmt2!=null) pstmt2.close();
+					if(conn!=null) conn.close();
+				}catch(SQLException se){
+					System.out.println(se.getMessage());
+				}
 			}
+			
 			%>
 			
 			
