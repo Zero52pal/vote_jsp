@@ -24,7 +24,7 @@ background-image:url(https://www.poscoict.com/images/main/main_visual2.jpg);
 }
 .vote-title{
 	font-size: 30px;
-	colot: #c92bcc;
+	color: #c92bcc;
 	text-align: center;
 	font-weight: 400;
 }
@@ -64,15 +64,18 @@ background-image:url(https://www.poscoict.com/images/main/main_visual1.jpg);
 <%String memberId=(String)session.getAttribute("memberId");
 session = request.getSession();
 %>
-	<div align="center">
-		<ul>
-			<br/><br/>
-			<h1 style="color:white;">안녕하세요 <%= session.getAttribute("memberId")%> 님</h1>
-			<button class="vote-button" type="button" onclick="location.href='voteResult.jsp' ">투표율</button>
-			<button class="vote-button" type="button" onclick="location.href='voteList.jsp?memberId=<%=memberId %>'">투표하기</button>
-			<button class="vote-button" type="button" onclick="location.href='logout.jsp' ">로그아웃</button>
-		</ul>
-	</div>
+
+<div align="center">
+
+<ul>
+	<br/><br/>
+	<h1 class="vote-title">안녕하세요 <%= session.getAttribute("memberId")%> 님</h1>
+	
+	<button class="vote-button" type="button" onclick="location.href='voteResult.jsp' ">투표율</button>
+	<button class="vote-button" type="button" onclick="location.href='voteList.jsp?memberId=<%=memberId %>'">투표하기</button>
+	<button class="vote-button" type="button" onclick="location.href='logout.jsp' ">로그아웃</button>
+</ul>
+</div>
 
 </body>
 </html>
