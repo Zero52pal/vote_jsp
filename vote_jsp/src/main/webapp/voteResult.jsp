@@ -49,7 +49,7 @@
 .vote-button{
 	background-color: #e32fe5;
 	width: 150px;
-	display: block;
+	display: block;  
 	margin-top:20px;
 	height: 50px;
 	line-height: 50px;
@@ -122,7 +122,7 @@
                      double percent = (cnt*100)/cntSum; //순서바뀌면 오류 뜸  (cnt/cntSum)*100
                      %>
                      <div style="height: <%=percent %>%; background-color:<%=rgb%>" align="center">
-                        <em><%=percent %></em>
+                        <em><%=percent %> %</em>
                      </div>
                   </li>
                </ul>

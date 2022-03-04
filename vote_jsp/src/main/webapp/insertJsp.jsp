@@ -48,10 +48,10 @@
          rs = pstmt2.executeQuery();
          while(rs.next()) {
             if(rs.getString(1).equals(id) == true) {
-
-              out.println("아이디중복 인해 가입에 실패했습니다.");
-              out.println("<a href='javascript:history.go(-1)'>이전페이지로 가기</a>");
-
+%>
+              <h1>아이디중복 인해 가입에 실패했습니다.</h1>
+              <a href='javascript:history.go(-1)'>이전페이지로 가기</a>
+<%
                pstmt2.close();
                rs.close();
                return;
@@ -88,12 +88,16 @@
 
 
       if(n>0){
+    	  
 			out.println(id + "님! 성공적으로 가입되었습니다.<br/>");
-			out.println("<a href='index.jsp'>메인페이지 이동</a>");
-
+			%>
+			<h1><a href='index.jsp'>메인페이지 이동</a></h1>
+		<% 
       }else{
-			out.println("오류로 인해 가입에 실패했습니다.<br/>");
-			out.println("<a href='javascript:history.go(-1)'>이전페이지로 가기</a>");
+    	  %>
+			<h1>오류로 인해 가입에 실패했습니다.</h1><br/>
+			<h1><a href='javascript:history.go(-1)'>이전페이지로 가기</a></h1>
+			<%
       }   
 
 %>

@@ -31,14 +31,23 @@
 			pstmt = con.prepareStatement(sql);
 
 			pstmt.execute();
-	        
-			out.println("<h1>투표개최 성공 하였습니다. 감사합니다</h1>");
+	        %>
+			<h1>투표개최 성공 하였습니다. 감사합니다</h1>
+			<input class="vote-button" type="button" value="뒤로가기" onclick="history.back(-1);">
+			<%
 		}catch(ClassNotFoundException ce){
 			System.out.println(ce.getMessage());
-			out.println("<h1>투표 개최에 실패 하였습니다</h1>");
+			%>
+			<h1>투표 개최에 실패 하였습니다</h1>
+			<input class="vote-button" type="button" value="뒤로가기" onclick="history.back(-1);">
+			<%
 		}catch(SQLException se){
+			
 			System.out.println(se.getMessage());
-			out.println("<h1>투표 개최에 실패 하였습니다</h1>");
+			%>
+			<h1>투표 개최에 실패 하였습니다</h1>
+			<input class="vote-button" type="button" value="뒤로가기" onclick="history.back(-1);">
+			<% 
 		}finally{
 			try{
 				if(rs!=null) rs.close();

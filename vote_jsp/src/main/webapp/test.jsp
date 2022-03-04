@@ -20,7 +20,9 @@
 		
 		 Class.forName("com.mysql.cj.jdbc.Driver");
 		 conn = DriverManager.getConnection(jdbcUrl,dbId ,dbPass );
-		 out.println("DB에 연결되었습니다.");
+		 %>
+		 <h1>DB에 연결되었습니다.</h1>
+		 <%
 	  }catch(Exception e){ 
 		 e.printStackTrace();
 	  }
