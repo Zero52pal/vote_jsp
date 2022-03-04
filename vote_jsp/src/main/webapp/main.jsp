@@ -54,13 +54,16 @@
 </style>
 </head>
 <body>
+
 	<div align="center">
 	<div class="vote-wrapp">
 		<div class="vote-top">
+
 			<a href = "#" class="logo">
 			<img src="https://www.poscoict.com/images/kor5/common/h1_posco.png">
 			</a>
 		</div>
+
 		<div class="vote-box">
 			<h1 class="vote-title">MAIN</h1>
 				<button class="vote-button"onclick="location.href='login.jsp'">로그인</button>
@@ -68,5 +71,6 @@
 		</div>
 	</div>
 	</div>
+
 </body>
 </html>

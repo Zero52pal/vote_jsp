@@ -87,19 +87,5 @@
 		
 	</form>
 
-
-	<<!-- div id="insert-window">
-		<form method="post" action="insertJsp.jsp">
-			<br> <br> <label for="name">이름</label>&nbsp&nbsp&nbsp&nbsp&nbsp
-			<input type="text" name="name" /><br />
-			<br> <label for="id">아이디</label>&nbsp&nbsp&nbsp&nbsp&nbsp 
-			<input type="text" name="id" /><br />
-			<br> <label for="password">비밀번호</label>&nbsp&nbsp <input
-				type="text" name="pwd" /><br />
-			<br> <input id="insert-button" type="submit" value="가입">
-			<input id="insert-button" type="reset" value="취소" /> <input
-				type="button" value="뒤로가기" onclick="history.back(-1);">
-		</form>
-	</div> -->
 </body>
 </html>
