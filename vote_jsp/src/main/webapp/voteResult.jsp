@@ -9,6 +9,9 @@
 <title>Vote Result</title>
 </head>
 <style>
+body{
+background-image:url(https://www.poscoict.com/images/main/main_visual4.jpg);
+}
         .ratio{padding-top:20px  }
         .ratio li{float:center;position:relative;width:100px;height:300px;margin-right:10px;list-style:none}
         .ratio div{position:absolute;left:0;bottom:0;width:100%;background:#D9AAF0 repeat;}

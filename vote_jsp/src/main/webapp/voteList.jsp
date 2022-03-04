@@ -15,6 +15,9 @@
 <link href="style.css" rel="stylesheet" type="text/css">
 
 <style>
+body{
+background-image:url(https://www.poscoict.com/images/main/main_visual3.jpg);
+}
 .vote-wrapp{
 	background-color: #fdeafd;
 	
