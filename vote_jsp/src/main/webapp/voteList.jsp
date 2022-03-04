@@ -19,11 +19,12 @@ body{
 background-image:url(https://www.poscoict.com/images/main/main_visual3.jpg);
 }
 .vote-wrapp{
-	background-color: #fdeafd;
-	
+	background-color: rgba( 255, 255, 255, 1);
+	width: 1500px;
+	margin-left:200px; 
 }
 .vote-button{
-	background-color: #e32fe5;
+	background-color: #ffffff;
 	width: 150px;
 	display: block;
 	margin-left:10px; 
@@ -31,7 +32,7 @@ background-image:url(https://www.poscoict.com/images/main/main_visual3.jpg);
 	height: 50px;
 	line-height: 50px;
 	border-radius: 80px;
-	color: #fdeafd;
+	color: #0020f0;
 	font-size: 16px;
 	font-weight: 700;
 }
@@ -42,6 +43,7 @@ table, th, td {
 
 </head>
 <body>
+<img src="https://biz.chosun.com/resizer/15rHyQGMpgxl4L6HePAMYYmZM9Y=/601x500/smart/cloudfront-ap-northeast-1.images.arcpublishing.com/chosunbiz/XM62ZAO6SQOLVNHOP4HQGFFBAU.jpg" width=100 height=100>
 	<% String memberId = request.getParameter("memberId"); %>
 	
 <div class="vote-wrapp">
@@ -68,12 +70,12 @@ table, th, td {
 				<td><input type="radio" name="name" value="베트남"></td>
 			</tr>
 		</table>
+	</form>
+</div>
 		<div align="center">
 		<input class="vote-button" type="submit" value="투표" />
 		<button class="vote-button" type="button" onclick="location.href='voteResult.jsp' ">결과</button>
 		</div>
-	</form>
-</div>
 
 </body>
 </html>
