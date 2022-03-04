@@ -39,7 +39,7 @@
 			pstmt2 = conn.prepareStatement(sql2);
 			rs = pstmt.executeQuery();
 			rs2 = pstmt2.executeQuery();
-
+			
 			while(rs.next()){
 				if(id.equals(rs.getString("id"))) {
 					if(pwd.equals(rs.getString("password"))){
@@ -48,7 +48,7 @@
 					}
 				}
 			}
-		
+			
 			while(rs2.next()){
 				if(id.equals(rs2.getString("id"))) {
 					if(pwd.equals(rs2.getString("password"))){
