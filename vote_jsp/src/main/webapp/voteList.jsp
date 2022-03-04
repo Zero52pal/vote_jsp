@@ -17,7 +17,6 @@
 <style>
 table, th, td {
   border: 1px solid black;
-  border-collapse: collapse;
 }
 </style>
 
@@ -25,15 +24,17 @@ table, th, td {
 <body>
 	<% String memberId = request.getParameter("memberId"); %>
 
+
 	<h1 align="center"> 희망 근무지역 투표 </h1>
+	
 
 	<form name="votelist_form" method="post" action="vote.jsp">
 		<table style="width: 100%" >
 			<tr>
-				<th><img src="https://www.poscoict.com/images/support/img_loc_go.png" width=100 height=100></th>
-				<th><img src="https://www.poscoict.com/images/support/img_loc_ho.png" width=100 height=100></th>
-				<th><img src="https://www.poscoict.com/images/support/img_loc_po.png" width=100 height=100></th>
-				<th><img src="https://www.poscoict.com/images/support/img_loc_vi.png" width=100 height=100></th>
+				<th><img src="https://www.poscoict.com/images/support/img_loc_go.png" width=250 height=250></th>
+				<th><img src="https://www.poscoict.com/images/support/img_loc_ho.png" width=250 height=250></th>
+				<th><img src="https://www.poscoict.com/images/support/img_loc_po.png" width=250 height=250></th>
+				<th><img src="https://www.poscoict.com/images/support/img_loc_vi.png" width=250 height=250></th>
 			</tr>
 			<tr align="center">
 				<td>광양</td>
@@ -50,7 +51,7 @@ table, th, td {
 			</tr>
 		</table>
 		<input type="submit" value="투표" />
-		<input type="button" value="결과" />
+		<button type="button" onclick="location.href='voteResult.jsp' ">결과</button>
 	</form>
 
 </body>
