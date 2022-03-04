@@ -40,7 +40,7 @@
 	background-color: #e32fe5;
 	width: 200px;
 	display: block;
-	margin-left:120px; 
+	margin-left:10px; 
 	margin-top:30px;
 	height: 70px;
 	line-height: 70px;
@@ -55,6 +55,7 @@
 </head>
 <body>
 	<form method="post" action="loginJsp.jsp">
+	<div align="center">
 	<div class="login-wrapp">
 		<div class="login-top">
 			<a href = "#" class="logo">
@@ -66,16 +67,17 @@
 			<ul class="login-form">
 				<li>
 					<strong class="login-guide">ID</strong>&ensp;&emsp;&emsp;&emsp;&emsp;
-					<input type="text" name="id"/><br/>
+					<input type="text" name="id"/><br/><br/>
 				</li>
 				<li>
 					<strong class="login-guide">PASSWORD</strong>
-					<input type="text" name="pwd"/><br/>
+					<input type="text" name="pwd"/><br/><br/>
 				</li>
 			</ul>
 			<input class="login-button" type="submit" value="로그인">
 			<input class="login-button" type="button" value="뒤로가기" onclick="history.back(-1);">
 		</div>
+	</div>
 	</div>
 	</form>
 </body>
