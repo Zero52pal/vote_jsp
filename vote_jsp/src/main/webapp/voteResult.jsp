@@ -82,10 +82,7 @@
 				e.printStackTrace();
 			}
 			%>
-			
-			
-			
-			
+				
 		</tr>
 		
 			<tr align="center" >
