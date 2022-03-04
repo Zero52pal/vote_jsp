@@ -93,7 +93,7 @@
 
       }else{
 			out.println("오류로 인해 가입에 실패했습니다.<br/>");
-			out.println("<a href='javascript:history.go(-1)'>이전페이지로 가기</a>");
+			out.println("<a href='insert.jsp'>이전페이지로 가기</a>");
       }   
 
 %>
