@@ -52,6 +52,9 @@ background-image:url(https://www.poscoict.com/images/main/main_visual2.jpg);
 	font-size: 16px;
 	font-weight: 700;
 }
+body{
+background-image:url(https://www.poscoict.com/images/main/main_visual1.jpg);
+}
 
 </style>
 
@@ -61,6 +64,7 @@ background-image:url(https://www.poscoict.com/images/main/main_visual2.jpg);
 <%String memberId=(String)session.getAttribute("memberId");
 session = request.getSession();
 %>
+
 <div align="center">
 
 <ul>
