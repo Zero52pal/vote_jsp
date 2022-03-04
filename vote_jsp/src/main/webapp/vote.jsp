@@ -81,6 +81,7 @@
 			
 			%>
 			<h1>투표에 성공 하였습니다. 감사합니다</h1>
+			<a href='loginMain.jsp'>메인으로 가기</a>
 			<%
 		}catch(ClassNotFoundException ce){
 			System.out.println(ce.getMessage());

@@ -14,7 +14,7 @@
         .ratio div{position:absolute;left:0;bottom:0;width:100%;background:#D9AAF0 repeat;}
         /* .ratio em{position:absolute; top:-30px;width:100%;font-size:20px;font-weight:bold;text-align:left;}
          */
-         .ratio em{position:relative; top:-50px; font-weight:bold;}
+         .ratio em{position:relative; top:-50px; font-weight:bold; }
         
 .vote-wrapp{
 	background-color: #fdeafd;
@@ -87,7 +87,7 @@
    %>
    <form method=post class = "vote-form">
    <div align="center">
-      <table class = "vote-box">
+      <table class = "vote-box" style="font-size:20px;">
          <tr>
             <td colspan="4"><h1 align="center">투표 결과</h1></td>
          </tr>
@@ -147,6 +147,13 @@
          
          %>
       </tr>
+    
+    	<tr align="center" >
+            <th><img src="https://www.poscoict.com/images/support/img_loc_go.png" width=250 height=250></th>
+			<th><img src="https://www.poscoict.com/images/support/img_loc_ho.png" width=250 height=250></th>
+			<th><img src="https://www.poscoict.com/images/support/img_loc_po.png" width=250 height=250></th>
+			<th><img src="https://www.poscoict.com/images/support/img_loc_vi.png" width=250 height=250></th>
+         </tr>
     
          <tr align="center" >
             <td>광양</td>
