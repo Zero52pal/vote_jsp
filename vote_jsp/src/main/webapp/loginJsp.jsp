@@ -48,7 +48,7 @@
 					}
 				}
 			}
-			
+			rs2.close();
 			while(rs2.next()){
 				if(id.equals(rs2.getString("id"))) {
 					if(pwd.equals(rs2.getString("password"))){
@@ -57,7 +57,8 @@
 					}
 				}
 			}
-
+			rs.close();
+			
 		}catch(ClassNotFoundException ce){
 			System.out.println(ce.getMessage());
 		}catch(SQLException se){
@@ -65,6 +66,7 @@
 		}finally{
 			try{
 				if(pstmt!=null) pstmt.close();
+				if(pstmt!=null) pstmt2.close();
 				if(conn!=null) conn.close();
 				response.setContentType("text/html;charset=UTF-8");
 				PrintWriter pw = response.getWriter();
