@@ -53,5 +53,6 @@ table, th, td {
 		<input type="submit" value="투표" />
 		<input type="button" value="결과" />
 	</form>
+
 </body>
 </html>
