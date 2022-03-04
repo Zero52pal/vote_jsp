@@ -32,14 +32,19 @@
 
 			pstmt.setString(1, name);
 			pstmt.execute();
-	        
-			out.println("<h1>투표에 성공 하였습니다. 감사합니다</h1>");
+	%>
+	<h1>투표에 성공 하였습니다. 감사합니다</h1>
+	<%
 		}catch(ClassNotFoundException ce){
 			System.out.println(ce.getMessage());
-			out.println("<h1>투표에 실패 하였습니다</h1>");
+	%>
+	<h1>투표에 실패 하였습니다</h1>
+	<% 
 		}catch(SQLException se){
 			System.out.println(se.getMessage());
-			out.println("<h1>투표에 실패 하였습니다</h1>");
+	%>
+	<h1>투표에 실패 하였습니다</h1>
+	<% 
 		}finally{
 			try{
 				if(rs!=null) rs.close();
