@@ -10,7 +10,7 @@ body{
 background-image:url(https://www.poscoict.com/images/main/main_visual5.jpg);
 }
 .vote-button{
-	background-color: #fdeafd;
+	background-color: #ffffff;
 	width: 200px;
 	display: block;
 	margin-left:10px; 
@@ -18,14 +18,23 @@ background-image:url(https://www.poscoict.com/images/main/main_visual5.jpg);
 	height: 70px;
 	line-height: 70px;
 	border-radius: 80px;
-	color: #e32fe5;
+	color: #0020f0;
 	font-size: 16px;
 	font-weight: 700;
+}
+.vote-box{
+	margin-top:300px;
+	border-radius: 20px;
+	padding: 20px 40px 40px;
+	position: relative;
 }
 </style>
 </head>
 <body>
-<div align="center">
+
+<img src="https://biz.chosun.com/resizer/15rHyQGMpgxl4L6HePAMYYmZM9Y=/601x500/smart/cloudfront-ap-northeast-1.images.arcpublishing.com/chosunbiz/XM62ZAO6SQOLVNHOP4HQGFFBAU.jpg" width=100 height=100>
+
+<div class="vote-box" align="center">
 	<button class="vote-button" type="button" onclick="location.href='voteStart.jsp' ">투표시작</button>
 	<button class="vote-button" type="button" onclick="location.href='voteStop.jsp' ">투표마감</button>
 	<button class="vote-button" type="button" onclick="location.href='voteResult.jsp' ">투표결과보기</button>
