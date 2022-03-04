@@ -57,20 +57,20 @@
 		}
 		
 		response.setContentType("text/html;charset=UTF-8");
-		PrintWriter pw = response.getWriter();
-		pw.println("<html>");
-		pw.println("<head></head>");
-		pw.println("<body>");
+
+		out.println("<html>");
+		out.println("<head></head>");
+		out.println("<body>");
 		if(n>0){
 			session = request.getSession();
 			session.setAttribute("memberId", id);
 			System.out.println(id);
 			response.sendRedirect("loginMain.jsp");	
 		}else{
-			pw.println("<a href='javascript:history.go(-1)'>이전페이지로 가기</a>");
+			out.println("<a href='javascript:history.go(-1)'>이전페이지로 가기</a>");
 		}
-		pw.println("</body>");
-		pw.println("</html>");
+		out.println("</body>");
+		out.println("</html>");
 %>
 </body>
 </html>

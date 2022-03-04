@@ -9,8 +9,8 @@
 <body>
 <ul>
 
-	<li><a href="loginMain.jsp">투표율</a></li>
-	<li><a href="loginMain.jsp">투표하기</a></li>
+	<li><a href="voteResult.jsp">투표율</a></li>
+	<li><a href="voteList.jsp">투표하기</a></li>
 	
 </ul>
 	<% session = request.getSession();

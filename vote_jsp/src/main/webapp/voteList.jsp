@@ -25,6 +25,7 @@ table, th, td {
 <body>
 	<h1 align="center"> 2기 반장선거 </h1>
 	<h4 align="center"> (이 결과는 실제로 반영될 것입니다.) </h4>
+
 	<form name="votelist_form" method="post" action="vote.jsp">
 		<table style="width: 100%" >
 			<tr>
@@ -52,5 +53,6 @@ table, th, td {
 		<input type="submit" value="투표" />
 		<input type="button" value="결과" />
 	</form>
+
 </body>
 </html>
