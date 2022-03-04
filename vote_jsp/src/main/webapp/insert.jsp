@@ -84,6 +84,7 @@ background-image:url(https://www.poscoict.com/images/main/main_visual6.jpg);
 			<input class="vote-button" id="insert-button" type="submit" value="가입"/>
 			<input class="vote-button" id="insert-button" type="reset" value="취소" />
 			<button class="vote-button" type="button" onclick="location.href='main.jsp' ">뒤로가기</button>
+
 		</div>
 	</div>	
 	</div>
