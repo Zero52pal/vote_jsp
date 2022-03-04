@@ -70,7 +70,7 @@
 				</li>
 				<li>
 					<strong class="login-guide">PASSWORD</strong>
-					<input type="password" name="pwd"/><br/>
+					<input type="text" name="pwd"/><br/>
 				</li>
 			</ul>
 			<input class="login-button" type="submit" value="로그인">
