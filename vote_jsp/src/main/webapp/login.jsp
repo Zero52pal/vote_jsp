@@ -16,6 +16,7 @@
 		<input type="password" name="pwd"/><br/>
 		<input type="submit" value="로그인">
 		<input type="reset" value="취소"/>
+		<input type="button" value="뒤로가기" onclick="history.back(-1);">
 	</fieldset>
 </form>
 </body>

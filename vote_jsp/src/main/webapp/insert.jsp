@@ -39,6 +39,7 @@
 			<input type="text" name="pwd"/><br/><br>
 		<input id="insert-button" type="submit" value="가입">
 		<input id="insert-button" type="reset" value="취소"/>
+		<input type="button" value="뒤로가기" onclick="history.back(-1);">
 </form>
 </div>
 </body>
