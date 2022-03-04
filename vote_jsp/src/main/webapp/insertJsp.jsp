@@ -60,7 +60,7 @@
             rs.close();
          }
          
-         String sql = "insert into user values( ?,?,?,false, now() )";
+         String sql = "insert into user values( ?,?,?,now(),false )";
             
          pstmt = conn.prepareStatement(sql);
          pstmt.setString(1, id);
