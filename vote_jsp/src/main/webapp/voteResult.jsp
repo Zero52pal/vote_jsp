@@ -35,18 +35,16 @@
        Class.forName("com.mysql.cj.jdbc.Driver");
        conn = DriverManager.getConnection(jdbcUrl,dbId ,dbPass );
        out.println("DB에 연결되었습니다.");
-       
-       
 
      }catch(Exception e){ 
        e.printStackTrace();
      }
    %>
-   <form method=post action="testPage.jsp">
+   <form method=post>
       <table width="80%" border="1" align="center" cellpadding="10"
          cellspacing="1">
          <tr>
-            <td colspan="5"><h1 align="center">투표 결과</h1></td>
+            <td colspan="4"><h1 align="center">투표 결과</h1></td>
          </tr>
          <tr>
          
@@ -59,9 +57,7 @@
                   cntSum = rs1.getInt("cntSum");
                   System.out.print(cntSum + "    ");
                }
-            
-            
-               
+
                String sql2 = "select * from candidate";
                pstmt2 = conn.prepareStatement(sql2);
                rs2 = pstmt2.executeQuery();
@@ -70,21 +66,17 @@
                   int id = rs2.getInt("id");
                   String name = rs2.getString("name");
                   int cnt = rs2.getInt("cnt");    
-                  
-                  
-               
-               
-            
+
          %>
          
          <td>
-            <ul class="ratio">
+            <ul class="ratio" align="center">
                   <li>
                      <%
                      rgb = "#"+Integer.toHexString(r.nextInt(255*255*255));
                      double percent = (cnt*100)/cntSum; //순서바뀌면 오류 뜸  (cnt/cntSum)*100
                      %>
-                     <div style="height: <%=percent %>%; background-color:<%=rgb%>" >
+                     <div style="height: <%=percent %>%; background-color:<%=rgb%>" align="center">
                         <%-- <em><%=Integer.toString(cntSum) %></em> --%>
                         <em><%=percent %></em>
                      </div>
@@ -94,7 +86,6 @@
          
          <% 
                   
-            
             }
          }catch(Exception e){
             e.printStackTrace();
@@ -111,18 +102,13 @@
          }
          
          %>
-         
-         
-         
-         
       </tr>
-      
+    
          <tr align="center" >
-            <td>김익한</td>
-            <td>이권철</td>
-            <td>이동현</td>
-            <td>이진선</td>
-            <td>최호진</td>
+            <td>광양</td>
+            <td>포항</td>
+            <td>판교</td>
+            <td>베트남</td>
          </tr>
       </table>
    </form>
