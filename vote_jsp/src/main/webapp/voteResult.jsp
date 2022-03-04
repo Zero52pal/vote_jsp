@@ -12,7 +12,52 @@
         .ratio{padding-top:20px  }
         .ratio li{float:center;position:relative;width:100px;height:300px;margin-right:10px;list-style:none}
         .ratio div{position:absolute;left:0;bottom:0;width:100%;background:#D9AAF0 repeat;}
-        .ratio em{position:absolute;top:-30px;width:100%;font-size:20px;font-weight:bold;text-align:center}
+        /* .ratio em{position:absolute; top:-30px;width:100%;font-size:20px;font-weight:bold;text-align:left;}
+         */
+         .ratio em{position:relative; top:-50px; font-weight:bold;}
+        
+.vote-wrapp{
+	background-color: #fdeafd;
+	width: 600px;
+	margin: 50px; auto;
+	border-bottom: 1px solid #fdeafd;
+	box-shadow: 0px 11px 31px rgb(0,0,0,0.2);
+}
+
+.vote-top{
+	background-color: #e32fe5;
+	padding: 60px 0 120px;
+	text-align: center;
+}
+.vote-title{
+	font-size: 30px;
+	colot: #c92bcc;
+	text-align: center;
+	font-weight: 400;
+}
+.vote-form{
+	margin-top: 30px;
+}
+
+.vote-box{
+	background-color: #fdeafd;
+	margin:-40px 40px 40px;
+	border-radius: 20px;
+	padding: 20px 40px 40px;
+	box-shadow: 0px 3px 20px rgb(0,0,0,0.2);
+}
+.vote-button{
+	background-color: #e32fe5;
+	width: 150px;
+	display: block;
+	margin-top:20px;
+	height: 50px;
+	line-height: 50px;
+	border-radius: 80px;
+	color: #fdeafd;
+	font-size: 16px;
+	font-weight: 700;
+}
     </style>
 <body>
    <%
@@ -40,9 +85,9 @@
        e.printStackTrace();
      }
    %>
-   <form method=post>
-      <table width="80%" border="1" align="center" cellpadding="10"
-         cellspacing="1">
+   <form method=post class = "vote-form">
+   <div align="center">
+      <table class = "vote-box">
          <tr>
             <td colspan="4"><h1 align="center">투표 결과</h1></td>
          </tr>
@@ -77,7 +122,6 @@
                      double percent = (cnt*100)/cntSum; //순서바뀌면 오류 뜸  (cnt/cntSum)*100
                      %>
                      <div style="height: <%=percent %>%; background-color:<%=rgb%>" align="center">
-                        <%-- <em><%=Integer.toString(cntSum) %></em> --%>
                         <em><%=percent %></em>
                      </div>
                   </li>
@@ -111,7 +155,8 @@
             <td>베트남</td>
          </tr>
       </table>
-      <input class="login-button" type="button" value="뒤로가기" onclick="history.back(-1);">
+      <input class="vote-button" type="button" value="뒤로가기" onclick="history.back(-1);">
+   </div>
    </form>
    </body>
 
