@@ -12,7 +12,52 @@
         .ratio{padding-top:20px  }
         .ratio li{float:center;position:relative;width:100px;height:300px;margin-right:10px;list-style:none}
         .ratio div{position:absolute;left:0;bottom:0;width:100%;background:#D9AAF0 repeat;}
-        .ratio em{position:absolute;top:-30px;width:100%;font-size:20px;font-weight:bold;text-align:center}
+        /* .ratio em{position:absolute; top:-30px;width:100%;font-size:20px;font-weight:bold;text-align:left;}
+         */
+         .ratio em{position:relative; top:-50px; font-weight:bold;}
+        
+.vote-wrapp{
+	background-color: #fdeafd;
+	width: 600px;
+	margin: 50px; auto;
+	border-bottom: 1px solid #fdeafd;
+	box-shadow: 0px 11px 31px rgb(0,0,0,0.2);
+}
+
+.vote-top{
+	background-color: #e32fe5;
+	padding: 60px 0 120px;
+	text-align: center;
+}
+.vote-title{
+	font-size: 30px;
+	colot: #c92bcc;
+	text-align: center;
+	font-weight: 400;
+}
+.vote-form{
+	margin-top: 30px;
+}
+
+.vote-box{
+	background-color: #fdeafd;
+	margin:-40px 40px 40px;
+	border-radius: 20px;
+	padding: 20px 40px 40px;
+	box-shadow: 0px 3px 20px rgb(0,0,0,0.2);
+}
+.vote-button{
+	background-color: #e32fe5;
+	width: 150px;
+	display: block;
+	margin-top:20px;
+	height: 50px;
+	line-height: 50px;
+	border-radius: 80px;
+	color: #fdeafd;
+	font-size: 16px;
+	font-weight: 700;
+}
     </style>
 <body>
    <%
@@ -34,19 +79,17 @@
       
        Class.forName("com.mysql.cj.jdbc.Driver");
        conn = DriverManager.getConnection(jdbcUrl,dbId ,dbPass );
-       out.println("DB에 연결되었습니다.");
-       
-       
+       System.out.println("DB에 연결되었습니다.");
 
      }catch(Exception e){ 
        e.printStackTrace();
      }
    %>
-   <form method=post action="testPage.jsp">
-      <table width="80%" border="1" align="center" cellpadding="10"
-         cellspacing="1">
+   <form method=post class = "vote-form">
+   <div align="center">
+      <table class = "vote-box">
          <tr>
-            <td colspan="5"><h1 align="center">투표 결과</h1></td>
+            <td colspan="4"><h1 align="center">투표 결과</h1></td>
          </tr>
          <tr>
          
@@ -59,9 +102,7 @@
                   cntSum = rs1.getInt("cntSum");
                   System.out.print(cntSum + "    ");
                }
-            
-            
-               
+
                String sql2 = "select * from candidate";
                pstmt2 = conn.prepareStatement(sql2);
                rs2 = pstmt2.executeQuery();
@@ -70,22 +111,17 @@
                   int id = rs2.getInt("id");
                   String name = rs2.getString("name");
                   int cnt = rs2.getInt("cnt");    
-                  
-                  
-               
-               
-            
+
          %>
          
          <td>
-            <ul class="ratio">
+            <ul class="ratio" align="center">
                   <li>
                      <%
                      rgb = "#"+Integer.toHexString(r.nextInt(255*255*255));
                      double percent = (cnt*100)/cntSum; //순서바뀌면 오류 뜸  (cnt/cntSum)*100
                      %>
-                     <div style="height: <%=percent %>%; background-color:<%=rgb%>" >
-                        <%-- <em><%=Integer.toString(cntSum) %></em> --%>
+                     <div style="height: <%=percent %>%; background-color:<%=rgb%>" align="center">
                         <em><%=percent %></em>
                      </div>
                   </li>
@@ -94,7 +130,6 @@
          
          <% 
                   
-            
             }
          }catch(Exception e){
             e.printStackTrace();
@@ -111,20 +146,17 @@
          }
          
          %>
-         
-         
-         
-         
       </tr>
-      
+    
          <tr align="center" >
-            <td>김익한</td>
-            <td>이권철</td>
-            <td>이동현</td>
-            <td>이진선</td>
-            <td>최호진</td>
+            <td>광양</td>
+            <td>포항</td>
+            <td>판교</td>
+            <td>베트남</td>
          </tr>
       </table>
+      <input class="vote-button" type="button" value="뒤로가기" onclick="history.back(-1);">
+   </div>
    </form>
    </body>
 
