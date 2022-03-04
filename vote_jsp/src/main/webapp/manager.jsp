@@ -10,5 +10,6 @@
 	<button type="button" onclick="location.href='voteStart.jsp' ">투표시작</button>
 	<button type="button" onclick="location.href='voteStop.jsp' ">투표마감</button>
 	<button type="button" onclick="location.href='voteResult.jsp' ">투표결과보기</button>
+	<a href="logout.jsp">로그아웃</a>
 </body>
 </html>
