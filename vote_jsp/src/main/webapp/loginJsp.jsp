@@ -65,7 +65,7 @@
 			session = request.getSession();
 			session.setAttribute("memberId", id);
 			System.out.println(id);
-			response.sendRedirect("loginMain.jsp");	
+			pageContext.forward("loginMain.jsp");	
 		}else{
 			out.println("<a href='javascript:history.go(-1)'>이전페이지로 가기</a>");
 		}
