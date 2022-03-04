@@ -54,19 +54,7 @@
 
 </head>
 <body>
-<!-- <form method="post" action="loginJsp.jsp">
-	<fieldset id="regbox">
-		<legend>로그인</legend>
-		<label for="id">아이디</label>
-		<input type="text" name="id"/><br/>
-		<label for="pwd">비밀번호</label>
-		<input type="password" name="pwd"/><br/>
-		<input type="submit" value="로그인">
-		<input type="reset" value="취소"/>
-		<input type="button" value="뒤로가기" onclick="history.back(-1);">
-	</fieldset> 
-</form> -->
-
+	<form method="post" action="loginJsp.jsp">
 	<div class="login-wrapp">
 		<div class="login-top">
 			<a href = "#" class="logo">
@@ -89,6 +77,6 @@
 			<input class="login-button" type="button" value="뒤로가기" onclick="history.back(-1);">
 		</div>
 	</div>
-
+	</form>
 </body>
 </html>
