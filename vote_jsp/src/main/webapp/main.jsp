@@ -54,20 +54,16 @@
 </style>
 </head>
 <body>
-<<<<<<< Updated upstream
+
 	<div align="center">
 	<div class="vote-wrapp">
 		<div class="vote-top">
-=======
-<div align="center">	
-	<div class="login-wrapp">
-		<div class="login-top">
->>>>>>> Stashed changes
+
 			<a href = "#" class="logo">
 			<img src="https://www.poscoict.com/images/kor5/common/h1_posco.png">
 			</a>
 		</div>
-<<<<<<< Updated upstream
+
 		<div class="vote-box">
 			<h1 class="vote-title">MAIN</h1>
 				<button class="vote-button"onclick="location.href='login.jsp'">로그인</button>
@@ -75,14 +71,6 @@
 		</div>
 	</div>
 	</div>
-=======
-		<div align="center" class="login-box">
-			<h1 class="login-title">MAIN</h1>
-				<a class="login-button" href="login.jsp">&emsp;&emsp;&emsp;&emsp;로그인</a>
-				<a class="login-button" href="insert.jsp">&emsp;&emsp;&emsp;&emsp;회원가입</a>
-		</div>
-	</div>
-</div>
->>>>>>> Stashed changes
+
 </body>
 </html>

@@ -15,20 +15,35 @@
 <link href="style.css" rel="stylesheet" type="text/css">
 
 <style>
+.vote-wrapp{
+	background-color: #fdeafd;
+	
+}
+.vote-button{
+	background-color: #e32fe5;
+	width: 150px;
+	display: block;
+	margin-left:10px; 
+	margin-top:30px;
+	height: 50px;
+	line-height: 50px;
+	border-radius: 80px;
+	color: #fdeafd;
+	font-size: 16px;
+	font-weight: 700;
+}
 table, th, td {
-  border: 1px solid black;
+  border-color: #e32fe5;
 }
 </style>
 
 </head>
 <body>
 	<% String memberId = request.getParameter("memberId"); %>
-
-
-	<h1 align="center"> 희망 근무지역 투표 </h1>
 	
-
+<div class="vote-wrapp">
 	<form name="votelist_form" method="post" action="vote.jsp">
+	<h1 align="center"> 희망 근무지역 투표 </h1>
 		<table style="width: 100%" >
 			<tr>
 				<th><img src="https://www.poscoict.com/images/support/img_loc_go.png" width=250 height=250></th>
@@ -50,9 +65,12 @@ table, th, td {
 				<td><input type="radio" name="name" value="베트남"></td>
 			</tr>
 		</table>
-		<input type="submit" value="투표" />
-		<button type="button" onclick="location.href='voteResult.jsp' ">결과</button>
+		<div align="center">
+		<input class="vote-button" type="submit" value="투표" />
+		<button class="vote-button" type="button" onclick="location.href='voteResult.jsp' ">결과</button>
+		</div>
 	</form>
+</div>
 
 </body>
 </html>
