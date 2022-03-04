@@ -24,13 +24,10 @@
       String id = request.getParameter("id");
       String pwd= request.getParameter("pwd");
    		if(id.equals("")||pwd.equals("")||name.equals("")){
-   			out.println("<html>");
-            out.println("<head></head>");
-            out.println("<body>");
+
             out.println("입력란에 공백을 넣지말아주세요.<br/>");
             out.println("<a href='javascript:history.go(-1)'>이전페이지로 가기</a>");
-            out.println("</body>");
-            out.println("</html>");
+
             return;
    		}
 	  System.out.println(id);
@@ -58,13 +55,9 @@
          while(rs.next()) {
             if(rs.getString(1).equals(id) == true) {
             	
-               out.println("<html>");
-               out.println("<head></head>");
-               out.println("<body>");
                out.println("아이디중복 인해 가입에 실패했습니다.<br/>");
                out.println("<a href='javascript:history.go(-1)'>이전페이지로 가기</a>");
-               out.println("</body>");
-               out.println("</html>");
+
                pstmt2.close();
                rs.close();
                return;
@@ -98,9 +91,6 @@
       }
 
       // 3. 사용자(클라이언트)에 결과를 응답하기.
-      out.println("<html>");
-      out.println("<head></head>");
-      out.println("<body>");
 
       if(n>0){
          out.println( id + "님! 성공적으로 가입되었습니다.<br/>");
@@ -110,8 +100,6 @@
          out.println("오류로 인해 가입에 실패했습니다.<br/>");
          out.println("<a href='javascript:history.go(-1)'>이전페이지로 가기</a>");
       }   
-      out.println("</body>");
-      out.println("</html>");
 
 %>
 </body>
