@@ -6,6 +6,9 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <style>
+body{
+background-image:url(https://www.poscoict.com/images/main/main_visual5.jpg);
+}
 .vote-button{
 	background-color: #fdeafd;
 	width: 200px;

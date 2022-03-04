@@ -6,6 +6,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
 <style>
+body{
+background-image:url(https://www.poscoict.com/images/main/main_visual1.jpg);
+}
 .vote-wrapp{
 	background-color: #fdeafd;
 	vertical-align: middle;
