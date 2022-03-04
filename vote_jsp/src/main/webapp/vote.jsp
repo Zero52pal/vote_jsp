@@ -28,6 +28,7 @@
 		
 		
 		String userId = request.getParameter("memberId");
+		
 		System.out.println(userId);
 		
 		try{
@@ -44,8 +45,10 @@
 			rs2 = pstmt4.executeQuery();
 			rs2.next();
 			if(rs2.getString("flag").equals("0")){
-				out.println("<h1>투표가 개최되지 않았습니다.</h1>");
-				out.println("<a href='loginMain.jsp'>메인으로 가기</a>");
+				%>
+				<h1>투표가 개최되지 않았습니다.</h1>
+				<a href='loginMain.jsp'>메인으로 가기</a>
+				<%
 				return;
 			}
 			pstmt4.close();
@@ -54,8 +57,10 @@
 			rs = pstmt1.executeQuery();
 			rs.next();
 			if(rs.getString("flag").equals("1")){
-				out.println("<h1>중복 투표는 불가능합니다.</h1>");
-				out.println("<a href='loginMain.jsp'>메인으로 가기</a>");
+				%>
+				<h1>중복 투표는 불가능합니다.</h1>
+				<a href='loginMain.jsp'>메인으로 가기</a>
+				<%
 				return;
 			}
 			
@@ -74,16 +79,21 @@
 			pstmt3.setString(1, userId);
 			pstmt3.execute();
 			
-			
-			out.println("<h1>투표에 성공 하였습니다. 감사합니다</h1>");
+			%>
+			<h1>투표에 성공 하였습니다. 감사합니다</h1>
+			<%
 		}catch(ClassNotFoundException ce){
 			System.out.println(ce.getMessage());
-			out.println("<h1>투표에 실패 하였습니다</h1>");
-			out.println("<a href='loginMain.jsp'>메인으로 가기</a>");
+			%>
+			<h1>투표에 실패 하였습니다</h1>
+			<a href='loginMain.jsp'>메인으로 가기</a>
+			<%
 		}catch(SQLException se){
 			System.out.println(se.getMessage());
-			out.println("<h1>투표에 실패 하였습니다</h1>");
-			out.println("<a href='loginMain.jsp'>메인으로 가기</a>");
+			%>
+			<h1>투표에 실패 하였습니다</h1>
+			<a href='loginMain.jsp'>메인으로 가기</a>
+			<%
 		}
 		finally{
 

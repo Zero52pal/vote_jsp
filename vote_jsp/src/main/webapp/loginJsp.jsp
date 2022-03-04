@@ -82,7 +82,9 @@
 					System.out.println(id);
 					pageContext.forward("manager.jsp");
 				}else{
-					out.println("<a href='javascript:history.go(-1)'>이전페이지로 가기</a>");
+					%>
+					<a href='javascript:history.go(-1)'>이전페이지로 가기</a>
+					<%
 				}
 			}catch(SQLException se){
 				System.out.println(se.getMessage());
