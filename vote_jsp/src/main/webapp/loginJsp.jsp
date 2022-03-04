@@ -20,9 +20,12 @@
 		String pwd= request.getParameter("pwd");
 		String name= request.getParameter("name");
 		ResultSet rs = null;
+		ResultSet rs2 = null;
 
 		int n=0;
+		int m=0;
 		PreparedStatement pstmt = null;
+		PreparedStatement pstmt2 = null;
 		Connection conn = null;
 		try{
 			String jdbcUrl = "jdbc:mysql://18.205.188.103:3306/test?&useSSL=false";
@@ -31,13 +34,25 @@
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			conn = DriverManager.getConnection(jdbcUrl,dbId ,dbPass );
 			String sql = "select * from user";
+			String sql2 = "select * from manager";
 			pstmt = conn.prepareStatement(sql);
+			pstmt2 = conn.prepareStatement(sql2);
 			rs = pstmt.executeQuery();
+			rs2 = pstmt2.executeQuery();
 
 			while(rs.next()){
 				if(id.equals(rs.getString("id"))) {
 					if(pwd.equals(rs.getString("password"))){
 						n=1;
+						break;
+					}
+				}
+			}
+			
+			while(rs2.next()){
+				if(id.equals(rs2.getString("id"))) {
+					if(pwd.equals(rs2.getString("password"))){
+						m=1;
 						break;
 					}
 				}
@@ -51,21 +66,25 @@
 			try{
 				if(pstmt!=null) pstmt.close();
 				if(conn!=null) conn.close();
+				response.setContentType("text/html;charset=UTF-8");
+				PrintWriter pw = response.getWriter();
+
+				if(n>0){
+					session = request.getSession();
+					session.setAttribute("memberId", id);
+					System.out.println(id);
+					pageContext.forward("loginMain.jsp");	
+				}else if(m>0){
+					session = request.getSession();
+					session.setAttribute("memberId", id);
+					System.out.println(id);
+					pageContext.forward("manager.jsp");
+				}else{
+					out.println("<a href='javascript:history.go(-1)'>이전페이지로 가기</a>");
+				}
 			}catch(SQLException se){
 				System.out.println(se.getMessage());
 			}
-		}
-		
-		response.setContentType("text/html;charset=UTF-8");
-		PrintWriter pw = response.getWriter();
-
-		if(n>0){
-			session = request.getSession();
-			session.setAttribute("memberId", id);
-			System.out.println(id);
-			pageContext.forward("loginMain.jsp");	
-		}else{
-			out.println("<a href='javascript:history.go(-1)'>이전페이지로 가기</a>");
 		}
 %>
 </body>

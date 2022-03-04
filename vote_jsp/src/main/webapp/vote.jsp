@@ -21,8 +21,10 @@
 		PreparedStatement pstmt1 = null;
 		PreparedStatement pstmt2 = null;
 		PreparedStatement pstmt3 = null;
+		PreparedStatement pstmt4 = null;
 		Connection con = null;
-		ResultSet rs=null;
+		ResultSet rs = null;
+		ResultSet rs2 = null;
 		
 		
 		String userId = request.getParameter("memberId");
@@ -34,8 +36,20 @@
 			con = DriverManager.getConnection(url, "lion", "1234");
 			
 			String sql1 = "select flag from user where id = ?";
+			String sql4 = "select flag from manager where id = 'admin'";
 			pstmt1 = con.prepareStatement(sql1);
 			pstmt1.setString(1, userId);
+			
+			pstmt4 = con.prepareStatement(sql4);		
+			rs2 = pstmt4.executeQuery();
+			rs2.next();
+			if(rs2.getString("flag").equals("0")){
+				out.println("<h1>투표가 개최되지 않았습니다.</h1>");
+				out.println("<a href='loginMain.jsp'>메인으로 가기</a>");
+				return;
+			}
+			pstmt4.close();
+			rs2.close();
 			
 			rs = pstmt1.executeQuery();
 			rs.next();
@@ -75,9 +89,11 @@
 
 			try{
 				if(rs!=null) rs.close();
+				if(rs!=null) rs2.close();
 				if(pstmt1!=null) pstmt1.close();
 				if(pstmt2!=null) pstmt2.close();
 				if(pstmt3!=null) pstmt3.close();
+				if(pstmt4!=null) pstmt4.close();
 				if(con!=null) con.close();
 			}catch(SQLException se){
 				System.out.println(se.getMessage());

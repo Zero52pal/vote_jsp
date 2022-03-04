@@ -7,8 +7,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<input type="button" value="투표시작" />
-	<input type="button" value="투표종료" />
+	<button type="button" onclick="location.href='voteStart.jsp' ">투표시작</button>
+	<button type="button" onclick="location.href='voteStop.jsp' ">투표마감</button>
 	<button type="button" onclick="location.href='voteResult.jsp' ">투표결과보기</button>
 </body>
 </html>
