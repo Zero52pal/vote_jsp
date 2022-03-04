@@ -80,7 +80,7 @@
 			</ul>
 			<input class="vote-button" id="insert-button" type="submit" value="가입"/>
 			<input class="vote-button" id="insert-button" type="reset" value="취소" />
-			<input class="vote-button" type="button" value="뒤로가기" onclick="history.back(-1);"/>
+			<input class="vote-button" type="button" value="뒤로가기" onclick="insert.jsp"/>
 		</div>
 	</div>	
 	</div>

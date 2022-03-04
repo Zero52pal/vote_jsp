@@ -48,7 +48,7 @@
 					}
 				}
 			}
-			rs2.close();
+		
 			while(rs2.next()){
 				if(id.equals(rs2.getString("id"))) {
 					if(pwd.equals(rs2.getString("password"))){
@@ -57,7 +57,7 @@
 					}
 				}
 			}
-			rs.close();
+			
 			
 		}catch(ClassNotFoundException ce){
 			System.out.println(ce.getMessage());
