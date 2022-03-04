@@ -1,68 +1,45 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-
 <head>
-
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
 <title>Insert title here</title>
-<h2 id="title">È¸¿ø°¡ÀÔ</h2>
+<h2 id="title">íšŒì›ê°€ì…</h2>
 <hr size = "3px" color="black">
 <style type="text/css">
 	#title{
 		color: black;
 		font-weight : lighter;
 		text-align: center;
-	}
-	
+	}	
 	#insert-window {
 		background-color: #C7EBA7;
 		margin: 40px 40px 40px;
 		border-radius: 20px;
 		padding: 20px 40px 40px;
 		box-shadow: 0px 3px 20px rgb(0, 0, 0, 2);
-	
-	
+		
 		display: flex;
 		justify-content: center;
 		align-items: center;
 	}
-	
-
-	
-	
-	
 </style>
-
 </head>
-
 <body>
-
-
 <div id = "insert-window">
 <form method="post" action="insertJsp.jsp">
-		
 			<br>
 			<br>
-			<label for="name">ÀÌ¸§</label>&nbsp&nbsp&nbsp&nbsp&nbsp
+			<label for="name">ì´ë¦„</label>&nbsp&nbsp&nbsp&nbsp&nbsp
 			<input type="text" name="name"/><br/><br>
-			<label for="id">¾ÆÀÌµğ</label>&nbsp&nbsp&nbsp&nbsp&nbsp
+			<label for="id">ì•„ì´ë””</label>&nbsp&nbsp&nbsp&nbsp&nbsp
 			<input type="text" name="id"/><br/><br>
-			<label for="password">ºñ¹Ğ¹øÈ£</label>&nbsp&nbsp
+			<label for="password">ë¹„ë°€ë²ˆí˜¸</label>&nbsp&nbsp
 			<input type="text" name="pwd"/><br/><br>
-
-		
-		<!-- <a href="submit" class="button">&nbsp&nbsp&nbsp&nbsp°¡ÀÔ</a>
-		<a href="reset" class="button">&nbsp&nbsp&nbsp&nbspÃë¼Ò</a> -->
-		<input id="insert-button" type="submit" value="°¡ÀÔ">
-		<input id="insert-button" type="reset" value="Ãë¼Ò"/>
-	
-
+		<input id="insert-button" type="submit" value="ê°€ì…">
+		<input id="insert-button" type="reset" value="ì·¨ì†Œ"/>
 </form>
 </div>
-
 </body>
-
 </html>
