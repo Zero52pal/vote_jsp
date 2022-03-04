@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>POSCO ICT 2th BitKing</title>
+<title>Vote Result</title>
 </head>
 <style>
         .ratio{padding-top:20px  }
@@ -13,9 +13,7 @@
         .ratio div{position:absolute;left:0;bottom:0;width:100%;background:#D9AAF0 repeat;}
         .ratio em{position:absolute;top:-30px;width:100%;font-size:20px;font-weight:bold;text-align:center}
     </style>
-
 <body>
-
 	<%
 	  	Connection conn=null;
 		PreparedStatement pstmt=null;
@@ -34,61 +32,43 @@
 		 String sql = "select * from candidate";
 			pstmt = conn.prepareStatement(sql);
 			rs = pstmt.executeQuery();
-		 
-		
 	  }catch(Exception e){ 
 		 e.printStackTrace();
 	  }
 	%>
-
-
 	<form method=post action="testPage.jsp">
 		<table width="80%" border="1" align="center" cellpadding="10"
 			cellspacing="1">
 			<tr>
 				<td colspan="5"><h1 align="center">투표 결과</h1></td>
 			</tr>
-			
 			<tr>
-			<%-- <%
+			<%
 			while(rs.next()){
 				int id = rs.getInt("id");
 				String name = rs.getString("name");
 				int cnt = rs.getInt("cnt");
+				sum = sum + cnt;
+				out.println("<td>");
+				out.println("<ul class=");
 				
-				
-				
-				out.println("<td> ");
-				out.println(" <ul class=");
-				out.println("ratio ");
-				out.println("><li> ");
-				out.println("<div style= ");
-				out.println("height: 30% ");
-				out.println("><em>");
-				out.println("30%");
-				out.println("></em>");
-				out.println("</div>");
-				out.println("</li>");
+				out.println("ratio");
+				out.println(">");
+					out.println("<li>");
+					out.println(100);
+							
+						out.println("</li>");
 				out.println("</ul>");
 				out.println("</td>");
-				out.println("");
-
-				
-				
-				
 			} 
-			
-			
-			%> --%>
+			%>
 		</tr>
-			
 			<tr align="center" >
 				<td>김익한</td>
 				<td>이권철</td>
 				<td>이동현</td>
 				<td>이진선</td>
 				<td>최호진</td>
-				
 			</tr>
 		</table>
 	</form>
