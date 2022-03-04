@@ -32,7 +32,10 @@
 		 String sql = "select * from candidate";
 			pstmt = conn.prepareStatement(sql);
 			rs = pstmt.executeQuery();
+<<<<<<< HEAD
+=======
 
+>>>>>>> c52b633a81d49dd58239e215408b7c55a3eaf9f2
 	  }catch(Exception e){ 
 		 e.printStackTrace();
 	  }
