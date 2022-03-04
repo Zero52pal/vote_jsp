@@ -17,7 +17,6 @@
 </ul>
 	<% session = request.getSession();
 	out.print("안녕하세요 " + session.getAttribute("memberId") + "님"+ "<br>");
-	
 	%>
 	<a href="logout.jsp">로그아웃</a>
 <%-- 
