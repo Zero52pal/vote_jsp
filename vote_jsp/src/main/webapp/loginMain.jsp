@@ -6,6 +6,9 @@
 <meta charset="EUC-KR">
 <title>Insert title here</title>
 <style>
+body{
+background-image:url(https://www.poscoict.com/images/main/main_visual2.jpg);
+}
 .vote-wrapp{
 	background-color: #fdeafd;
 	width: 600px;

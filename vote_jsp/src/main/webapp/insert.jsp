@@ -6,6 +6,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
 <style>
+body{
+background-image:url(https://www.poscoict.com/images/main/main_visual6.jpg);
+}
 .vote-wrapp{
 	background-color: #fdeafd;
 	width: 600px;
@@ -80,7 +83,7 @@
 			</ul>
 			<input class="vote-button" id="insert-button" type="submit" value="가입"/>
 			<input class="vote-button" id="insert-button" type="reset" value="취소" />
-			<input class="vote-button" type="button" value="뒤로가기" onclick="insert.jsp"/>
+			<button class="vote-button" type="button" onclick="location.href='main.jsp' ">뒤로가기</button>
 		</div>
 	</div>	
 	</div>
