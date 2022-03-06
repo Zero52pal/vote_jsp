@@ -9,57 +9,38 @@
 <title>Vote Result</title>
 </head>
 <style>
+body{
+background-image:url(https://www.poscoict.com/images/main/main_visual4.jpg);
+}
         .ratio{padding-top:20px  }
         .ratio li{float:center;position:relative;width:100px;height:300px;margin-right:10px;list-style:none}
         .ratio div{position:absolute;left:0;bottom:0;width:100%;background:#D9AAF0 repeat;}
         /* .ratio em{position:absolute; top:-30px;width:100%;font-size:20px;font-weight:bold;text-align:left;}
          */
          .ratio em{position:relative; top:-50px; font-weight:bold; }
-        
-.vote-wrapp{
-	background-color: #fdeafd;
-	width: 600px;
-	margin: 50px; auto;
-	border-bottom: 1px solid #fdeafd;
-	box-shadow: 0px 11px 31px rgb(0,0,0,0.2);
-}
-
-.vote-top{
-	background-color: #e32fe5;
-	padding: 60px 0 120px;
-	text-align: center;
-}
-.vote-title{
-	font-size: 30px;
-	colot: #c92bcc;
-	text-align: center;
-	font-weight: 400;
-}
-.vote-form{
-	margin-top: 30px;
-}
 
 .vote-box{
-	background-color: #fdeafd;
-	margin:-40px 40px 40px;
+	background-color: rgba( 255, 255, 255, 1);
+	margin: -100px 40px 40px;
 	border-radius: 20px;
 	padding: 20px 40px 40px;
 	box-shadow: 0px 3px 20px rgb(0,0,0,0.2);
 }
 .vote-button{
-	background-color: #e32fe5;
+	background-color: #ffffff;
 	width: 150px;
 	display: block;  
-	margin-top:20px;
+	margin-top:-20px;
 	height: 50px;
 	line-height: 50px;
 	border-radius: 80px;
-	color: #fdeafd;
+	color: #0020f0;
 	font-size: 16px;
 	font-weight: 700;
 }
     </style>
 <body>
+<img src="https://biz.chosun.com/resizer/15rHyQGMpgxl4L6HePAMYYmZM9Y=/601x500/smart/cloudfront-ap-northeast-1.images.arcpublishing.com/chosunbiz/XM62ZAO6SQOLVNHOP4HQGFFBAU.jpg" width=100 height=100>
    <%
         Connection conn=null;
       PreparedStatement pstmt1=null;
@@ -85,7 +66,7 @@
        e.printStackTrace();
      }
    %>
-   <form method=post class = "vote-form">
+   <form method=post>
    <div align="center">
       <table class = "vote-box" style="font-size:20px;">
          <tr>
