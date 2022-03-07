@@ -83,6 +83,7 @@
 					pageContext.forward("manager.jsp");
 				}else{
 					%>
+					<h1>회원정보가 올바르지 않습니다.</h1>
 					<a href='javascript:history.go(-1)'>이전페이지로 가기</a>
 					<%
 				}
