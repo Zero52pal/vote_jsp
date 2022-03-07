@@ -26,7 +26,6 @@
 		ResultSet rs = null;
 		ResultSet rs2 = null;
 		
-		
 		String userId = request.getParameter("memberId");
 		
 		System.out.println(userId);
@@ -65,7 +64,6 @@
 			}
 			
 			String sql2 = "update candidate set cnt=cnt+1 where name=?";
-
 
 			pstmt2 = con.prepareStatement(sql2);
 			
