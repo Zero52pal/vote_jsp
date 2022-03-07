@@ -14,7 +14,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<%
+	<%
 		request.setCharacterEncoding("UTF-8");
 		String id = request.getParameter("id");
 		String pwd= request.getParameter("pwd");
@@ -63,33 +63,34 @@
 			System.out.println(ce.getMessage());
 		}catch(SQLException se){
 			System.out.println(se.getMessage());
-		}finally{
-			try{
-				if(pstmt!=null) pstmt.close();
-				if(pstmt!=null) pstmt2.close();
-				if(conn!=null) conn.close();
-				response.setContentType("text/html;charset=UTF-8");
-				PrintWriter pw = response.getWriter();
+		}
+		try{
+			if(pstmt!=null) pstmt.close();
+			if(pstmt!=null) pstmt2.close();
+			if(conn!=null) conn.close();
+			response.setContentType("text/html;charset=UTF-8");
+			PrintWriter pw = response.getWriter();
 
-				if(n>0){
-					session = request.getSession();
-					session.setAttribute("memberId", id);
-					System.out.println(id);
-					pageContext.forward("loginMain.jsp");	
-				}else if(m>0){
-					session = request.getSession();
-					session.setAttribute("memberId", id);
-					System.out.println(id);
-					pageContext.forward("manager.jsp");
-				}else{
-					%>
-					<h1>회원정보가 올바르지 않습니다.</h1>
-					<a href='javascript:history.go(-1)'>이전페이지로 가기</a>
-					<%
-				}
-			}catch(SQLException se){
-				System.out.println(se.getMessage());
+			if(n>0){
+				session = request.getSession();
+				session.setAttribute("memberId", id);
+				System.out.println(id);
+				response.sendRedirect("loginMain.jsp");
 			}
+			if(m>0){
+				session = request.getSession();
+				session.setAttribute("memberId", id);
+				System.out.println(id);
+				response.sendRedirect("manager.jsp");
+			}
+				
+			%>
+			<h1>회원정보가 올바르지 않습니다.</h1>
+			<a href='javascript:history.go(-1)'>이전페이지로 가기</a>
+			<%
+		}
+		catch(SQLException se){
+			System.out.println(se.getMessage());
 		}
 %>
 </body>
