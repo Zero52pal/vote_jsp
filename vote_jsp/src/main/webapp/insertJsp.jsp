@@ -70,22 +70,19 @@
          //sql구문 실행하기
          n=pstmt.executeUpdate();
 
-
       }catch(ClassNotFoundException ce){
          System.out.println(ce.getMessage());
       }catch(SQLException se){
          System.out.println(se.getMessage());
-      }finally{
-         try{
-            if(pstmt!=null) pstmt.close();
-            if(conn!=null) conn.close();
-         }catch(SQLException se){
-            System.out.println(se.getMessage());
-         }
+      }
+      try{
+         if(pstmt!=null) pstmt.close();
+         if(conn!=null) conn.close();
+      }catch(SQLException se){
+         System.out.println(se.getMessage());
       }
 
       // 3. 사용자(클라이언트)에 결과를 응답하기.
-
 
       if(n>0){
     	  
@@ -99,7 +96,6 @@
 			<h1><a href='javascript:history.go(-1)'>이전페이지로 가기</a></h1>
 			<%
       }   
-
 %>
 </body>
 </html>

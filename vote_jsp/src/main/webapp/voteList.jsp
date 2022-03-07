@@ -85,6 +85,5 @@ table, th, td {
 				onclick="location.href='voteResult.jsp' ">결과</button>
 		</div>
 	</form>
-
 </body>
 </html>

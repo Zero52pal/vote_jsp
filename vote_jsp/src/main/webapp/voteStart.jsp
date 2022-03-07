@@ -48,14 +48,13 @@
 			<h1>투표 개최에 실패 하였습니다</h1>
 			<input class="vote-button" type="button" value="뒤로가기" onclick="history.back(-1);">
 			<% 
-		}finally{
-			try{
-				if(rs!=null) rs.close();
-				if(pstmt!=null) pstmt.close();
-				if(con!=null) con.close();
-			}catch(SQLException se){
-				System.out.println(se.getMessage());
-			}
+		}
+		try{
+			if(rs!=null) rs.close();
+			if(pstmt!=null) pstmt.close();
+			if(con!=null) con.close();
+		}catch(SQLException se){
+			System.out.println(se.getMessage());
 		}
 	%>
 </body>

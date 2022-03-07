@@ -114,17 +114,17 @@ background-image:url(https://www.poscoict.com/images/main/main_visual4.jpg);
             }
          }catch(Exception e){
             e.printStackTrace();
-         }finally{
-            try{
-               if(rs1!=null) rs1.close();
-               if(rs2!=null) rs2.close();
-               if(pstmt1!=null) pstmt1.close();
-               if(pstmt2!=null) pstmt2.close();
-               if(conn!=null) conn.close();
-            }catch(SQLException se){
-               System.out.println(se.getMessage());
-            }
          }
+         try{
+            if(rs1!=null) rs1.close();
+            if(rs2!=null) rs2.close();
+            if(pstmt1!=null) pstmt1.close();
+            if(pstmt2!=null) pstmt2.close();
+            if(conn!=null) conn.close();
+         }catch(SQLException se){
+            System.out.println(se.getMessage());
+         }
+
          
          %>
       </tr>

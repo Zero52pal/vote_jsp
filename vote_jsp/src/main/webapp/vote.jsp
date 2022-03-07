@@ -94,19 +94,16 @@
 			<a href='loginMain.jsp'>메인으로 가기</a>
 			<%
 		}
-		finally{
-
-			try{
-				if(rs!=null) rs.close();
-				if(rs!=null) rs2.close();
-				if(pstmt1!=null) pstmt1.close();
-				if(pstmt2!=null) pstmt2.close();
-				if(pstmt3!=null) pstmt3.close();
-				if(pstmt4!=null) pstmt4.close();
-				if(con!=null) con.close();
-			}catch(SQLException se){
-				System.out.println(se.getMessage());
-			}
+		try{
+			if(rs!=null) rs.close();
+			if(rs!=null) rs2.close();
+			if(pstmt1!=null) pstmt1.close();
+			if(pstmt2!=null) pstmt2.close();
+			if(pstmt3!=null) pstmt3.close();
+			if(pstmt4!=null) pstmt4.close();
+			if(con!=null) con.close();
+		}catch(SQLException se){
+			System.out.println(se.getMessage());
 		}
 	%>
 </body>
